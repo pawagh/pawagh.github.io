@@ -4,6 +4,9 @@ body{
     max-width: 650px;
     margin: 50px auto;
     padding: 20px;
+    min-height: calc(100vh - 140px);
+    display: flex;
+    flex-direction: column;
 }
 
 .topnav{
@@ -33,3 +36,110 @@ body{
     text-underline-offset: 0.5em;
     color: #ff4e00;
   }
+
+  .publications h2 {
+    font-size: 20px;
+    margin-top: 96px;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 4px;
+}
+
+.paper-list {
+    list-style: none;
+    padding: 0;
+}
+
+.paper {
+    margin-bottom: 22px;
+}
+
+.paper-title {
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+}
+
+.paper-title:hover {
+    color: #ff4e00;
+    text-decoration: underline dotted;
+    text-underline-offset: 0.3em;
+}
+
+.paper-authors {
+    font-size: 15px;
+}
+
+.paper-authors .me {
+    font-weight: bold;
+}
+
+.paper-venue {
+    font-size: 15px;
+    font-style: italic;
+    color: #555555;
+}
+
+.paper-links a {
+    font-size: 14px;
+    color: #ff4e00;
+    text-decoration: none;
+    margin-right: 12px;
+}
+
+.paper-links a::before { content: "["; color: #000000; }
+.paper-links a::after  { content: "]"; color: #000000; }
+
+.paper-links a:hover {
+    text-decoration: underline;
+}
+
+.paper.has-thumb {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.paper-thumb {
+    width: 140px;
+    flex-shrink: 0;
+    border: 1px solid #ccc;
+}
+
+@media (max-width: 500px) {
+    .paper.has-thumb { flex-direction: column; }
+    .paper-thumb { width: 100%; }
+}
+
+.site-footer {
+    margin-top: auto;
+    padding-top: 40px;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 13px;
+    color: #555555;
+}
+
+.site-footer a {
+    color: #ff4e00;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline dotted;
+    text-underline-offset: 0.3em;
+}
+
+.links{
+    display: block;
+    text-align: center;
+}
+
+.links a {
+    color: #ff4e00;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline dotted;
+    text-underline-offset: 0.3em;
+}
